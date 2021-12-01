@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+<!-- "head" solo la ve el navegador (es para buscadores, etc.)-->
+<head>
+        <!-- Juego de caracteres de casi todos los idiomas humanos (incluidos ñ, tildes ...) -->
+        <meta charset=utf-8 />
+        <!-- Escala inicial y renderizado _responsive_ por el ancho del dispositivo -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Compatibilidad con Microsoft Explorer -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Indéxame y sígueme -->
+        <meta name="robots" content="Index, Follow" />
+        <!-- Breve descripción del sitio que se verá en los resultados de búsqueda -->
+        <meta name="description" content="Web del curso IFCD0110 de confección y publicación de páginas web. Aprende HTML5, CSS y JavaScript con nosotros. ¡Somos los mejores!" />
+        <!-- Ruta a las hojas de estilos -->
+        <link rel="stylesheet" type="text/css" href="/assets/css/application.css" />
+        <!-- Ruta al favicon -->
+    	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/vnd.microsoft.icon" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXX-n"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-XXXX-n');
+        </script>
+        <!-- Título de la pestaña -->
+        <title>IFCD0110 Curso Web</title>
+    </head>
+
+<body>
+	<header>
+        <a href="index.html" title="Página principal">
+            <figure>
+            	<img src="https://teorema-rd.com/storage/2020/05/Html5-JS-css-logo-1024x576.jpg" width="200px">
+            </figure>
+            <h1>Mi Web Supermolona</h1>
+        </a>
+        <p class="pechado">Slogan del sitio web</p>
+    </header>
+	<!-- Menú de navegación principal del sitio -->
+        <nav>
+            <h2 class="pechado">Menú principal</h2>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>Categorías
+                    <ul>
+                        <li>
+                            <a href="categories/html5.html">HTML5</a>
+                        </li>
+                        <li>
+                            <a href="categories/css.html">CSS</a>
+                        </li>
+                        <li>
+                            <a href="categories/js.html">JavaScript</a>
+                        </li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="pages/nosotros.html">Nosotros</a>
+                </li>
+                <li>
+                    <a href="pages/contacto.html">Contactos</a>
+                </li>
+            </ul>
+        </nav>
+	<main>
+		<article>
+			<h2>HTML5 y CSS</h2>
+<!-- sub es subíndice y sup es superíndice -->			
+			<p>Originalmente, las páginas HTML sólo incluían información sobre sus contenidos de texto e imagenes. Con el desarrollo del estándar HTML, <sub>las páginas empezaron</sub> a incluir <sup>también información</sup> sobre el aspecto de sus contenidos: tipos de letra, colores y márgenes.</p>
+			<p>La posterior aparición de tecnologías como JavaScript, provocaron que las páginas HTML también incluyeran el código de las aplicaciones (llamadas scripts) que se utilizan para crear páginas web dinámicas.Incluir en una misma página HTML los contenidos, el diseño y la programación complica en exceso su mantenimiento. Normalmente, los contenidos y el diseño de la página web son responsabilidad de diferentes personas, por lo que es conveniente separarlos.</p>
+			<p>CSS es el mecanismo que permite separar los contenidos definidos mediante XHTML y el aspecto que deben presentar esos contenidos
+<!-- small hace el tamaño del texto una talla más pequeña que el tamaño mínimo de fuente del navegador -->				
+			<small>Soy muy pequeñito</small>
+			</p>
+<!-- br/ es un salto de línea -->
+			<br/>
+			<p>Una ventaja añadida de la separación de los contenidos y su presentación es que los documentos XHTML creados son más flexibles, ya que se adaptan mejor a las diferentes plataformas: pantallas de ordenador, pantallas de dispositivos móviles, impresoras y dispositivos utilizados por personas discapacitadas.
+			<p>
+				<abbr title="Boletín Oficial del Estado">BOE</abbr></p>
+<!-- cite para citar -->			
+			<p>
+				<cite>OH BABY A TRIPLE</cite>
+			</p>
+<!-- blockquote "crea citas en bloque, marca las citas a otros autores o documentos" -->		
+			<p>
+				<blockquote>Hola soy un bloque</blockquote>
+			</p>
+			<p>De esta forma, utilizando exclusivamente XHTML se crean páginas web "feas" pero correctas. Aplicando CSS, se pueden crear páginas "bonitas" a partir de las páginas XHTML correctas.</p>
+			<a href="https://www.google.com/" title="Link de Javier a Google" target="_blank" rel="nofollow"> Llévame a Google </a>
+			<ul type="square">
+				<li>Carne</li>
+				<li>Pasta</li>
+				<li>Fruta
+					<ul>
+						<li>Manzanas</li>
+						<li>Peras</li>
+						<li>Bananas</li>
+					</ul>
+				</li>
+			</ul>
+			<ol type="i">
+				<li>Carne</li>
+				<li>Pasta</li>
+				<li>Fruta
+					<ul>
+						<li>Manzanas</li>
+						<li>Peras</li>
+						<li>Bananas</li>
+					</ul>
+				</li>	
+			</ol>
+			<ul>
+				<li>Nosotros:</li>
+				<li>Contacto:</li>
+				<a href="pages/contacto.html" title="contacta con nosotros" target="_blank"> Contacto <a/>
+				<li>Manuales:
+					<ul>
+						<li>
+							<a href="https://es.wikipedia.org/wiki/HTML5" title="Link de Javier Wiki HTML5" target="_blank" rel="nofollow"> Wikipedia HTML5 </a>
+						</li>
+						<li>
+							<a href="https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada" title="Link de Javier Wiki CSS" target="_blank" rel="nofollow"> Wikipedia CSS </a>
+						</li>
+						<li>
+							<a href="https://es.wikipedia.org/wiki/JavaScript" title="Link de Javier a Wiki JS" target="_blank" rel="nofollow"> Wikipedia Javascript </a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</article>
+	</main>
+</body>
+</html>
