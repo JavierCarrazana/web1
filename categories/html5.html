@@ -18,111 +18,53 @@
     	<link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/vnd.microsoft.icon" />
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXX-n"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-XXXX-n');
-        </script>
-        <!-- Título de la pestaña -->
-        <style>
-    html {
-        background: lightgrey;
-    }
-    body > header {
-        padding-left: 1em;
-        background: white;
-        border-bottom: 1px inset;
-    }
-    body > header figure{
-        display: inline-flex;
-        margin: 0 auto;
-    }
-    body > header h1 {
-        display: inline-flex;
-        vertical-align: top;
-        margin: 0 auto;
-        margin-top: 0.25em;
-    }
-    body > main section {
-        background: lightyellow;
-    }
-    section {
-        padding: 2em 5em;
-        border: 1px solid red;
-    }
-    section h2 {
-        color: red;
-    }
-    article {
-        padding: 1em;
-        border: 1px solid blue;
-        margin-bottom: 1em;
-    }
-    article h2,
-    article h3,
-    article h4,
-    article h5,
-    article h6 {
-        color: blue;
-    }
-    body > main aside {
-        margin-top: 1em;
-        padding: 2em 5em;
-        background: azure;
-        border: 1px solid;
-    }
-</style>
         <title>Título de la página web</title>
     </head>
     <!-- Cuerpo visible del documento web -->
     <body>
-            <header>
-        <a href="../index.html" title="Página principal">
-            <figure>
-                <img src="https://teorema-rd.com/storage/2020/05/Html5-JS-css-logo-1024x576.jpg" width="200px">
-            </figure>
-            <h1>Mi Web Supermolona</h1>
-        </a>
-        <p class="pechado">Slogan del sitio web</p>
+        <header>
+            <a href="../index.html" title="Página principal">
+                <figure>
+                    <img src="https://teorema-rd.com/storage/2020/05/Html5-JS-css-logo-1024x576.jpg" width="200px">
+                </figure>
+                <h1>Mi Web Supermolona</h1>
+            </a>
+            <p class="pechado">Slogan del sitio web</p>
         </header>
         <!-- Menú de navegación principal del sitio -->
-    <nav>
-            <h2 class="pechado">Menú principal</h2>
-        <aside>    
-            <ul>
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
-                <li>Categorías
-                    <ul>
-                        <li>
-                            <a href="../categories/html5.html">HTML5</a>
-                        </li>
-                        <li>
-                            <a href="../categories/css.html">CSS</a>
-                        </li>
-                        <li>
-                            <a href="../categories/js.html">JavaScript</a>
-                        </li>
-                        <li>
-                            <a href="../categories/loremipsum.html">loremipsum</a>
-                        </li>
-                        </ul>
-                </li>
-                <li>
-                    <a href="../pages/nosotros.html">Nosotros</a>
-                </li>
-                 <li>
-                    <a href="../pages/ejercicioHTML.html">Ejercicio</a>
-                </li>
-                <li>
-                    <a href="../pages/contacto.html">Contactos</a>
-                </li>
-            </ul>
-        </aside>    
-    </nav>
+        <nav>
+            <h2 class="pechado">Menú principal</h2>  
+                <ul>
+                    <li>
+                        <a href="../index.html">Inicio</a>
+                    </li>
+                    <li>Categorías
+                        <ul>
+                            <li>
+                                <a href="../categories/html5.html">HTML5</a>
+                            </li>
+                            <li>
+                                <a href="../categories/css.html">CSS</a>
+                            </li>
+                            <li>
+                                <a href="../categories/js.html">JavaScript</a>
+                            </li>
+                            <li>
+                                <a href="../categories/loremipsum.html">loremipsum</a>
+                            </li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="../pages/nosotros.html">Nosotros</a>
+                    </li>
+                     <li>
+                        <a href="../pages/ejercicioHTML.html">Ejercicio</a>
+                    </li>
+                    <li>
+                        <a href="../pages/contacto.html">Contactos</a>
+                    </li>
+                </ul>
+        </nav>
         <article>
             <h2>Incrustar Imagen</h2>
             <figure>
@@ -133,8 +75,9 @@
         <article>
             <h2>Incrustar Vídeo</h2>
             <video controls>
-                <source src="../videos/mov_bbb.mp4" type="video/mp4">
-                <p>Su navegador no soporta video HTML5. Aquí hay un <a href="https://peach.blender.org/">enlace al video</a>.</p>
+                <source src="../videos/rabbit320.mp4" type="video/mp4">
+                <source src="../videos/rabbit320.webm" type="video/webm">
+                <p>Su navegador no soporta video HTML5. Aquí hay un <a href="https://www.w3schools.com/html/html5_video.asp">enlace al video</a>.</p>
             </video>
         </article>     
         <footer></footer>
