@@ -1,37 +1,90 @@
 <!DOCTYPE html>
 <html lang="es" dir="ltr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="">
     <style>
-        /* margin siempre es transparente y siempre está por fuera del elemento */
+        /* El asterisco es el selector universal*/
         * {
+
             margin: 0;
+            /* margin siempre es transparente y siempre está por fuera del elemento */
             padding: 0;
             background-color: pink;
         }
-        header h1{
+
+        * {
+            color: red;
+        }
+
+        /* Esto anula y sustituye a lo anterior */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: black;
+        }
+
+        li,
+        a,
+        p {
+            color: dimgray;
+        }
+
+        header h1 {
+            /* height es el alto, width es el ancho y padding es relleno (una caja interior que separa el contenido del borde) */
             width: 100%;
             height: 50px;
             background-color: gray;
             padding: 8px;
         }
+
         nav {
             border: 1px solid red;
+        }
+        nav h2 {
+            display: none;
         }
         article {
             width: 40%;
             border: 1px solid black;
+            /* multiplicar el margin por dos puesto que se aplica a ambos márgenes*/
             margin: 3%;
+            /* otras maneras de aplicar margin a las 4 paredes: */
+            /* margin: 3% 3% 3% 3%; */
+            /* margin: 3% 3%; (arriba y abajo + izq y derecha)*/
+            /* margin-top: 3%
+            margin-right: 3%; 
+            margin-bottom: 3%;
+            margin-left: 3%; */
             padding: 10px;
         }
-        article, article p, article h2 {
+        article article p {
+            background-color: lime;
+        }
+        article,
+        article p,
+        article h2 {
             background-color: white;
         }
-        /* Cuando escribes "height" y "line-height" con el mismo valor te centra el texto*/
+
+        /* en cuanto a "section article article" la separación con espacios hace que sólo se modifice el elemento del final (article en este caso) los demás indican el orden de jerarquía. En este caso se modifican los articles que sean herederos de otro article, herederos de una section */
+        section article article {
+            width: 100%;
+        }
+
+        section article {
+            /* ponemos el width de manera que sume el 100% junto al (margin x2) se puede comprobar en el inspector del chrome*/
+            width: 94%;
+        }
+
         footer h2 {
+            /* Cuando escribes "height" y "line-height" con el mismo valor te centra el texto*/
             line-height: 80px;
             padding: 10px;
             background-color: black;
@@ -41,12 +94,13 @@
     </style>
     <title>Estilos 1</title>
 </head>
+
 <body>
     <header>
         <h1>Mis primeros estilos</h1>
     </header>
     <nav>
-       <h2>Menú Principal</h2>
+        <h2>Menú Principal</h2>
         <ul>
             <li>
                 <a href="../pages/nosotros.html">Nosotros</a>
@@ -60,45 +114,84 @@
         </ul>
     </nav>
     <main>
-        <article>
-            <h2>Lorem 1</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
-            </p>
-            <p>
-                Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
-            </p>
-        </article>
-        <article>
-            <h2>Lorem 2</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
-            </p>
-            <p>
-                Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
-            </p>
-        </article>
-        <article>
-            <h2>Lorem 3</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
-            </p>
-            <p>
-                Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
-            </p>
-        </article>
-        <article>
-            <h2>Lorem 4</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
-            </p>
-            <p>
-                Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
-            </p>
-        </article>
+        <section>
+
+        </section>
+        <section>
+            <article>
+                <h2>Lorem 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
+                </p>
+                <p>
+                    Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
+                </p>
+            </article>
+            <article>
+                <h2>Lorem 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
+                </p>
+                <p>
+                    Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
+                </p>
+            </article>
+            <article>
+                <h2>Lorem 3</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
+                </p>
+                <p>
+                    Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
+                </p>
+            </article>
+            <article>
+                <h2>Lorem 4</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
+                </p>
+                <p>
+                    Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
+                </p>
+            </article>
+        </section>
+        <section>
+            <h2>Artículos Anidados</h2>
+            <article>
+                <h3>Lorem H3</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
+                </p>
+                <p>
+                    Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
+                </p>
+                <article>
+                    <h4>Lorem H4</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
+                    </p>
+                    <p>
+                        Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
+                    </p>
+                    <article>
+                        <h5>Lorem H5</h5>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
+                        </p>
+                        <p>
+                            Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
+                        </p>
+                    </article>
+                </article>
+            </article>
+        </section>
+        <section>
+
+        </section>
     </main>
     <footer>
         <h2>Pie de página</h2>
     </footer>
 </body>
+
 </html>
