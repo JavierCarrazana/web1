@@ -1,90 +1,88 @@
-<style>
-        /* El asterisco es el selector universal*/
-        * {
+@charset "utf-8";
+/* El asterisco es el selector universal*/
+* {
 
-            margin: 0;
-            /* margin siempre es transparente y siempre está por fuera del elemento */
-            padding: 0;
-            background-color: pink;
-        }
+    margin: 0;
+    /* margin siempre es transparente y siempre está por fuera del elemento */
+    padding: 0;
+}
 
-        * {
-            color: red;
-        }
+* {
+    color: red;
+}
 
-        /* Esto anula y sustituye a lo anterior */
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: black;
-        }
+/* Esto anula y sustituye a lo anterior */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: black;
+}
 
-        li,
-        a,
-        p {
-            color: dimgray;
-        }
+li,
+a,
+p {
+    color: dimgray;
+}
 
-        header h1 {
-            /* height es el alto, width es el ancho y padding es relleno (una caja interior que separa el contenido del borde) */
-            width: 100%;
-            height: 50px;
-            background-color: gray;
-            padding: 8px;
-        }
+header h1 {
+    /* height es el alto, width es el ancho y padding es relleno (una caja interior que separa el contenido del borde) */
+    width: 100%;
+    height: 50px;
+    background-color: gray;
+    padding: 8px;
+}
 
-        nav {
-            border: 1px solid red;
-        }
+nav {
+    border: 1px solid red;
+}
 
-        nav h2 {
-            display: none;
-        }
+nav h2 {
+    display: none;
+}
 
-        article {
-            width: 40%;
-            border: 1px solid black;
-            /* multiplicar el margin por dos puesto que se aplica a ambos márgenes*/
-            margin: 3%;
-            /* otras maneras de aplicar margin a las 4 paredes: */
-            /* margin: 3% 3% 3% 3%; */
-            /* margin: 3% 3%; (arriba y abajo + izq y derecha)*/
-            /* margin-top: 3%
+article {
+    width: 40%;
+    border: 1px solid black;
+    /* multiplicar el margin por dos puesto que se aplica a ambos márgenes*/
+    margin: 3%;
+    /* otras maneras de aplicar margin a las 4 paredes: */
+    /* margin: 3% 3% 3% 3%; */
+    /* margin: 3% 3%; (arriba y abajo + izq y derecha)*/
+    /* margin-top: 3%
             margin-right: 3%; 
             margin-bottom: 3%;
             margin-left: 3%; */
-            padding: 10px;
-        }
+    padding: 10px;
+}
 
-        article article p {
-            background-color: lime;
-        }
+article article p {
+    background-color: lime;
+}
 
-        article,
-        article p,
-        article h2 {
-            background-color: white;
-        }
+article,
+article p,
+article h2 {
+    background-color: white;
+}
 
-        /* en cuanto a "section article article" la separación con espacios hace que sólo se modifice el elemento del final (article en este caso) los demás indican el orden de jerarquía. En este caso se modifican los articles que sean herederos de otro article, herederos de una section */
-        section article article {
-            width: 94%;
-        }
+/* en cuanto a "section article article" la separación con espacios hace que sólo se modifice el elemento del final (article en este caso) los demás indican el orden de jerarquía. En este caso se modifican los articles que sean herederos de otro article, herederos de una section */
+section article article {
+    width: 94%;
+}
 
-        section article {
-            /* ponemos el width de manera que sume el 100% junto al (margin x2) se puede comprobar en el inspector del chrome*/
-            width: 94%;
-        }
+section article {
+    /* ponemos el width de manera que sume el 100% junto al (margin x2) se puede comprobar en el inspector del chrome*/
+    width: 94%;
+}
 
-        footer h2 {
-            /* Cuando escribes "height" y "line-height" con el mismo valor te centra el texto*/
-            line-height: 80px;
-            padding: 10px;
-            background-color: black;
-            color: white;
-            text-align: center;
-        }
-    </style>
+footer h2 {
+    /* Cuando escribes "height" y "line-height" con el mismo valor te centra el texto*/
+    line-height: 80px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
