@@ -7,90 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="">
     <style>
-        /* El asterisco es el selector universal*/
-        * {
-
-            margin: 0;
-            /* margin siempre es transparente y siempre está por fuera del elemento */
-            padding: 0;
-            background-color: pink;
-        }
-
-        * {
-            color: red;
-        }
-
-        /* Esto anula y sustituye a lo anterior */
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            color: black;
-        }
-
-        li,
-        a,
-        p {
-            color: dimgray;
-        }
-
-        header h1 {
-            /* height es el alto, width es el ancho y padding es relleno (una caja interior que separa el contenido del borde) */
-            width: 100%;
-            height: 50px;
-            background-color: gray;
-            padding: 8px;
-        }
-
-        nav {
-            border: 1px solid red;
-        }
-        nav h2 {
-            display: none;
-        }
-        article {
-            width: 40%;
-            border: 1px solid black;
-            /* multiplicar el margin por dos puesto que se aplica a ambos márgenes*/
-            margin: 3%;
-            /* otras maneras de aplicar margin a las 4 paredes: */
-            /* margin: 3% 3% 3% 3%; */
-            /* margin: 3% 3%; (arriba y abajo + izq y derecha)*/
-            /* margin-top: 3%
-            margin-right: 3%; 
-            margin-bottom: 3%;
-            margin-left: 3%; */
-            padding: 10px;
-        }
-        article article p {
-            background-color: lime;
-        }
-        article,
-        article p,
-        article h2 {
-            background-color: white;
-        }
-
-        /* en cuanto a "section article article" la separación con espacios hace que sólo se modifice el elemento del final (article en este caso) los demás indican el orden de jerarquía. En este caso se modifican los articles que sean herederos de otro article, herederos de una section */
-        section article article {
-            width: 100%;
-        }
-
-        section article {
-            /* ponemos el width de manera que sume el 100% junto al (margin x2) se puede comprobar en el inspector del chrome*/
-            width: 94%;
-        }
-
-        footer h2 {
-            /* Cuando escribes "height" y "line-height" con el mismo valor te centra el texto*/
-            line-height: 80px;
-            padding: 10px;
-            background-color: black;
-            color: white;
-            text-align: center;
-        }
     </style>
     <title>Estilos 1</title>
 </head>
@@ -115,7 +31,46 @@
     </nav>
     <main>
         <section>
+            <h2>Cómo incluir CSS en un documento XHTML</h2>
+            <article>
+                <p>
+                    Una de las principales características de CSS es su flexibilidad y las diferentes opciones que ofrece para realizar una misma tarea. De hecho, existen tres opciones para incluir CSS en un documento HTML.
+                </p>
+                <h3>1.6.1. Incluir CSS en el mismo documento HTML</h3>
+                <p>
+                    Los estilos se definen en una zona específica del propio documento HTML. Se emplea la etiqueta <em>style</em> de HTML y solamente se pueden incluir en la cabecera del documento (sólo dentro de la sección <em>head</em>).
+                </p>
+                <p>Ejemplo:</p>
+                <p>
+                    Este método se emplea cuando se define un número pequeño de estilos o cuando se quieren incluir estilos específicos en una determinada página HTML que completen los estilos que se incluyen por defecto en todas las páginas del sitio web.</p>
 
+                <p>
+                    El principal inconveniente es que si se quiere hacer una modificación en los estilos definidos, es necesario modificar todas las páginas que incluyen el estilo que se va a modificar.</p>
+
+                <p>
+                    Los ejemplos mostrados en este libro utilizan este método para aplicar CSS al contenido HTML de las páginas. De esta forma el código de los ejemplos es más conciso y se aprovecha mejor el espacio.
+                </p>
+            </article>
+            <article>
+                <h3>1.6.2. Definir CSS en un archivo externo</h3>
+                <p>
+                    En este caso, todos los estilos CSS se incluyen en un archivo de tipo CSS que las páginas HTML enlazan mediante la etiqueta <em>link</em>. Un archivo de tipo CSS no es más que un archivo simple de texto cuya extensión es <em>.css</em> Se pueden crear todos los archivos CSS que sean necesarios y cada página HTML puede enlazar tantos archivos CSS como necesite.</p>
+
+                <p>
+                    Si se quieren incluir los estilos del ejemplo anterior en un archivo CSS externo, se deben seguir los siguientes pasos:</p>
+                <ol>
+                    <li>1) Se crea un archivo de texto y se le añade solamente el siguiente contenido:</li>
+                        <ul>
+                            <li>p { color: black; font-family: Verdana; }</li>
+                        </ul>
+                    <li>2) Se guarda el archivo de texto con el nombre <em>estilos.css</em> Se debe poner especial atención a que el archivo tenga extensión <em>.css</em> y no <em>.txt</em></li>
+                    <li>3) En la página HTML se enlaza el archivo CSS externo mediante la etiqueta <em>link</em>:</li>
+                </ol>
+                <p>Cuando el navegador carga la página HTML anterior, antes de mostrar sus contenidos también descarga los archivos CSS externos enlazados mediante la etiqueta
+                    <em>link</em> y aplica los estilos a los contenidos de la página.
+                </p>
+
+            </article>
         </section>
         <section>
             <article>
@@ -129,24 +84,6 @@
             </article>
             <article>
                 <h2>Lorem 2</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
-                </p>
-                <p>
-                    Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
-                </p>
-            </article>
-            <article>
-                <h2>Lorem 3</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
-                </p>
-                <p>
-                    Amet nulla facilisi morbi tempus iaculis urna id volutpat. Sed risus pretium quam vulputate dignissim suspendisse in. A erat nam at lectus urna duis. Purus in massa tempor nec feugiat nisl pretium fusce id. Ridiculus mus mauris vitae ultricies. Sed libero enim sed faucibus turpis in. Enim facilisis gravida neque convallis a cras semper auctor neque. Convallis posuere morbi leo urna molestie at elementum eu. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Faucibus a pellentesque sit amet porttitor eget. Vel facilisis volutpat est velit.
-                </p>
-            </article>
-            <article>
-                <h2>Lorem 4</h2>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra pharetra massa massa ultricies mi quis. Placerat orci nulla pellentesque dignissim enim sit. Erat pellentesque adipiscing commodo elit. Enim neque volutpat ac tincidunt vitae semper. Potenti nullam ac tortor vitae purus. Habitant morbi tristique senectus et netus et. Nunc sed augue lacus viverra. Dui accumsan sit amet nulla. Senectus et netus et malesuada fames. Sit amet dictum sit amet justo donec enim diam. Sit amet facilisis magna etiam tempor orci eu lobortis. Phasellus egestas tellus rutrum tellus pellentesque. Arcu non odio euismod lacinia.
                 </p>
