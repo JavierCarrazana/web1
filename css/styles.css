@@ -22,7 +22,7 @@ h4,
 h5,
 h6 {
     color: black;
-    font-family: Verdana, 'Catamaran', sans-serif;
+    font-family: 'Catamaran', sans-serif;
     font-size: large;
 }
 
@@ -32,7 +32,7 @@ strong,
 li,
 a {
     color: dimgray;
-    font-family: Verdana, 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: medium; 
 }
 a {
@@ -47,6 +47,15 @@ em {
 }
 .pepe {
     color: green;
+}
+.alineadoderecha {
+    text-align: right;
+}
+.alineadocentro {
+    text-align: center;
+}
+.alineadojustificado {
+    text-align: justify;
 }
 header h1 {
     /* height es el alto, width es el ancho y padding es relleno (una caja interior que separa el contenido del borde) */
