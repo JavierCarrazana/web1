@@ -34,10 +34,19 @@ a {
     color: dimgray;
     font-family: Verdana, 'Montserrat', sans-serif;
     font-size: medium; 
-
 }
 a {
     font-weight: bold;
+    color: steelblue;
+}
+em {
+    font-style: italic;
+}
+.todomayusculas {
+    font-variant: small-caps;
+}
+.pepe {
+    color: green;
 }
 header h1 {
     /* height es el alto, width es el ancho y padding es relleno (una caja interior que separa el contenido del borde) */
