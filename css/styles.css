@@ -33,30 +33,57 @@ li,
 a {
     color: dimgray;
     font-family: 'Montserrat', sans-serif;
-    font-size: medium; 
+    font-size: medium;
 }
+
 a {
     font-weight: bold;
     color: steelblue;
 }
+
 em {
     font-style: italic;
 }
+
 .todomayusculas {
     font-variant: small-caps;
 }
+
 .pepe {
     color: green;
 }
+
 .alineadoderecha {
     text-align: right;
 }
+
 .alineadocentro {
     text-align: center;
 }
+
 .alineadojustificado {
     text-align: justify;
 }
+/* ==========================================================================================*/
+/* Las prioridades de CSS son las siguientes (por defecto es descentiente salvo las 4 siguientes [que entre ellas existe la siguiente jerarquía en orden descendiente]) */
+
+/* En primer lugar va el selector de ID */
+#violeta {
+    color: violet;
+}
+/* En segundo lugar van las clases anidadas */
+article ol li {
+    color: blue;
+}
+/* En tercer lugar van */
+li {
+    color: tomato;
+}
+/* En último lugar irá */
+.rosa {
+    color: pink;
+}
+/* ===========================================================================================*/
 header h1 {
     /* height es el alto, width es el ancho y padding es relleno (una caja interior que separa el contenido del borde) */
     width: 100%;
