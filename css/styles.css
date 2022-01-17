@@ -64,26 +64,43 @@ em {
 .alineadojustificado {
     text-align: justify;
 }
+
 /* ==========================================================================================*/
-/* Las prioridades de CSS son las siguientes (por defecto es descentiente salvo las 4 siguientes [que entre ellas existe la siguiente jerarquía en orden descendiente]) */
+/* Las prioridades de CSS son las siguientes (por defecto la prioridad es descendiente salvo las 4 siguientes [que entre ellas existe la siguiente jerarquía en orden descendiente]) */
 
 /* En primer lugar va el selector de ID */
 #violeta {
-    color: violet;
+    color: darkviolet;
 }
-/* En segundo lugar van las clases anidadas */
-article ol li {
-    color: blue;
-}
-/* En tercer lugar van */
-li {
-    color: tomato;
-}
-/* En último lugar irá */
+
+/* En segundo lugar van las clases */
 .rosa {
     color: pink;
 }
+
+/* En tercer lugar van las etiquetas anidadas*/
+article ol li {
+    color: blue;
+}
+
+/* En último lugar irá la etiqueta individual*/
+li {
+    color: tomato;
+}
+
 /* ===========================================================================================*/
+/* Tabla*/
+
+table.azul th,
+table.azul td {
+    border: 1px solid blue;
+    color: black;
+}
+table.azul thead th {
+    background-color: blue;
+    color: white;
+}
+/* Fin de la tabla */
 header h1 {
     /* height es el alto, width es el ancho y padding es relleno (una caja interior que separa el contenido del borde) */
     width: 100%;
