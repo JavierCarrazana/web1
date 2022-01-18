@@ -40,7 +40,7 @@
     color: green;
 }
 
-/* tabla */
+/* inicio tabla ejercicio 2 */
 .ejercicio2 table {
     color: green;
 }
@@ -65,9 +65,12 @@
 .ejercicio2 .especial {
     color: orange;
 }
+
 .ejercicio2 table tbody tr strong {
     color: orange;
 }
+
 .ejercicio2 table tbody tr th {
     color: red;
 }
+/* fin tabla ejercicio 2*/
