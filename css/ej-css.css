@@ -42,7 +42,7 @@
 }
 
 /* ====inicio tabla ejercicio 2==== */
-.ejercicio2 td {
+.ejercicio2 table {
     color: green;
 /* border-collapse hace que los bordes se junten en 1 */ 
     border-collapse: collapse;
