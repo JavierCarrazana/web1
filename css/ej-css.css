@@ -1,5 +1,6 @@
+/*=================Ejercicio 2 CSS=====================*/
 /* Colores del ejercicio (por orden): teal, red, blue, orange, purple, olive, fuchsia y green */
-.ejercicio2 h1 {
+.ejercicio2 h2 {
     color: teal;
     font-size: xx-large;
 }
@@ -8,7 +9,7 @@
     color: red;
 }
 
-.ejercicio2 h2 {
+.ejercicio2 h3 {
     color: blue;
 }
 
@@ -74,3 +75,4 @@
     color: red;
 }
 /* fin tabla ejercicio 2*/
+/*=================Ejercicio 2 CSS=====================*/
