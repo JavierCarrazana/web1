@@ -5,7 +5,7 @@
     font-size: xx-large;
 }
 
-.ejercicio2 strong {
+.ejercicio2 p strong {
     color: red;
 }
 
@@ -44,35 +44,30 @@
 /* inicio tabla ejercicio 2 */
 .ejercicio2 table {
     color: green;
+/* border-collapse hace que los bordes se junten en 1 */ 
+    border-collapse: collapse;
 }
 
 .ejercicio2 th,
 .ejercicio2 td {
     border: 1px solid black;
+    padding: 5px;
 }
 
 .ejercicio2 table caption {
     color: blue;
 }
 
-.ejercicio2 table tfoot {
+.ejercicio2 table tfoot,
+.ejercicio2 table thead,
+.ejercicio2 table tbody tr th 
+{
     color: red;
 }
 
-.ejercicio2 table thead {
-    color: red;
-}
-
-.ejercicio2 .especial {
-    color: orange;
-}
-
+.ejercicio2 .especial,
 .ejercicio2 table tbody tr strong {
     color: orange;
-}
-
-.ejercicio2 table tbody tr th {
-    color: red;
 }
 /* fin tabla ejercicio 2*/
 /*=================Ejercicio 2 CSS=====================*/
