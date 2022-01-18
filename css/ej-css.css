@@ -41,8 +41,8 @@
     color: green;
 }
 
-/* inicio tabla ejercicio 2 */
-.ejercicio2 table {
+/* ====inicio tabla ejercicio 2==== */
+.ejercicio2 td {
     color: green;
 /* border-collapse hace que los bordes se junten en 1 */ 
     border-collapse: collapse;
@@ -69,5 +69,5 @@
 .ejercicio2 table tbody tr strong {
     color: orange;
 }
-/* fin tabla ejercicio 2*/
+/* ====fin tabla ejercicio 2====*/
 /*=================Ejercicio 2 CSS=====================*/
