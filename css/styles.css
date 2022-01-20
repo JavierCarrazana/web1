@@ -160,3 +160,9 @@ footer h2 {
     color: white;
     text-align: center;
 }
+/*=====================galería de imagenes===============*/
+ul.galeria li {
+    /* background: lime; */
+    display: inline-block;
+    list-style: none;
+}
